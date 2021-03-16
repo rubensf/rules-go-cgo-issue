@@ -1,0 +1,2 @@
+build --compiler=mingw-gcc
+build --incompatible_strict_action_env

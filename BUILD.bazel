@@ -1,0 +1,26 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_binary")
+
+cc_library(
+    name = "lib1",
+    srcs = ["lib1.cc"],
+)
+
+cc_library(
+    name = "lib2",
+    srcs = ["lib2.cc"],
+    deps = [":lib1"],
+)
+
+go_library(
+    name = "libgo",
+    srcs = ["libgo.go"],
+    cdeps = [":lib2"],
+    importpath = "test/main",
+    cgo = True,
+)
+
+go_binary(
+    name = "bin",
+    srcs = ["bin.go"],
+    deps = [":libgo"]
+)
