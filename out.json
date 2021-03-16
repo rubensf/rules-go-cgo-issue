@@ -1,5 +1,5 @@
 {
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/gcc", "-std\u003dgnu++0x", "-MD", "-MF", "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.d", "-frandom-seed\u003dbazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o", "-iquote", ".", "-iquote", "bazel-out/x64_windows-fastbuild/bin", "-c", "lib1.cc", "-o", "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o"],
+  "commandArgs": ["c:/tools/msys64/mingw64/bin/gcc", "-shared", "-o", "bazel-out/x64_windows-fastbuild/bin/libcc2_4a72131949.so", "-Wl,-rpath,$ORIGIN/_solib_x64_windows/../", "-Lbazel-out/x64_windows-fastbuild/bin", "bazel-out/x64_windows-fastbuild/bin/_objs/cc2/lib2.o", "-lcc1_4a72131949", "-Wl,-S", "-lstdc++"],
   "environmentVariables": [{
     "name": "PATH",
     "value": "c:/tools/msys64/mingw64/bin"
@@ -14,182 +14,24 @@
     "properties": []
   },
   "inputs": [{
-    "path": "external/bazel_tools/tools/cpp/grep-includes.sh",
+    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/cc2/lib2.o",
     "digest": {
-      "hash": "befa9bb7f77216235998b0807859a880f964efed48e74d6fdad56f5f4de4c1ab",
-      "sizeBytes": "744",
+      "hash": "1ca1ab154b69248be9dd0da0ef9d542fb9830e0361daa6e8fa6b721469633b35",
+      "sizeBytes": "736",
       "hashFunctionName": "SHA-256"
     }
   }, {
-    "path": "external/local_config_cc/builtin_include_directory_paths_mingw",
-    "digest": {
-      "hash": "dcbc6fa65e180fc6a8d5c3939a563061ccc4272119f7ea2cd1a10a936586714b",
-      "sizeBytes": "415",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "lib1.cc",
-    "digest": {
-      "hash": "513851e7c867022f8ff831d8de4872a5f2ecbaaacac80fdd35490063bf1e16fb",
-      "sizeBytes": "38",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.d", "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o"],
-  "remotable": true,
-  "cacheable": true,
-  "timeoutMillis": "0",
-  "progressMessage": "Compiling lib1.cc",
-  "mnemonic": "CppCompile",
-  "actualOutputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.d",
-    "digest": {
-      "hash": "9542e5a70acc319f0d79d7b60461cde305175fa706065ec940626e79fdad6943",
-      "sizeBytes": "9005",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o",
-    "digest": {
-      "hash": "7e756e14a463aa978945fe42e8f8e417d9c1ffea1fc083932df70e1f9dad7f05",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "runner": "local",
-  "remoteCacheHit": false,
-  "status": "",
-  "exitCode": 0
-}{
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/gcc", "-std\u003dgnu++0x", "-MD", "-MF", "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.d", "-frandom-seed\u003dbazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o", "-iquote", ".", "-iquote", "bazel-out/x64_windows-fastbuild/bin", "-c", "lib2.cc", "-o", "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o"],
-  "environmentVariables": [{
-    "name": "PATH",
-    "value": "c:/tools/msys64/mingw64/bin"
-  }, {
-    "name": "PWD",
-    "value": "/proc/self/cwd"
-  }, {
-    "name": "RUNFILES_MANIFEST_ONLY",
-    "value": "1"
-  }],
-  "platform": {
-    "properties": []
-  },
-  "inputs": [{
-    "path": "external/bazel_tools/tools/cpp/grep-includes.sh",
-    "digest": {
-      "hash": "befa9bb7f77216235998b0807859a880f964efed48e74d6fdad56f5f4de4c1ab",
-      "sizeBytes": "744",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "external/local_config_cc/builtin_include_directory_paths_mingw",
-    "digest": {
-      "hash": "dcbc6fa65e180fc6a8d5c3939a563061ccc4272119f7ea2cd1a10a936586714b",
-      "sizeBytes": "415",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "lib2.cc",
-    "digest": {
-      "hash": "513851e7c867022f8ff831d8de4872a5f2ecbaaacac80fdd35490063bf1e16fb",
-      "sizeBytes": "38",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.d", "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o"],
-  "remotable": true,
-  "cacheable": true,
-  "timeoutMillis": "0",
-  "progressMessage": "Compiling lib2.cc",
-  "mnemonic": "CppCompile",
-  "actualOutputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.d",
-    "digest": {
-      "hash": "e9cc7fce17d53256c4fece404b5c7dd3a94a8d03e1d16d7561210652b7180699",
-      "sizeBytes": "9005",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o",
-    "digest": {
-      "hash": "492ee49530d68f8f1ef8eeadf5e63f204033b44e58725e1be63ae6184d2e48b8",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "runner": "local",
-  "remoteCacheHit": false,
-  "status": "",
-  "exitCode": 0
-}{
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/ar", "rcsD", "bazel-out/x64_windows-fastbuild/bin/liblib1.a", "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o"],
-  "environmentVariables": [{
-    "name": "PATH",
-    "value": "c:/tools/msys64/mingw64/bin"
-  }, {
-    "name": "PWD",
-    "value": "/proc/self/cwd"
-  }, {
-    "name": "RUNFILES_MANIFEST_ONLY",
-    "value": "1"
-  }],
-  "platform": {
-    "properties": []
-  },
-  "inputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o",
-    "digest": {
-      "hash": "7e756e14a463aa978945fe42e8f8e417d9c1ffea1fc083932df70e1f9dad7f05",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/liblib1.a"],
-  "remotable": true,
-  "cacheable": true,
-  "timeoutMillis": "0",
-  "progressMessage": "Linking liblib1.a",
-  "mnemonic": "CppLink",
-  "actualOutputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/liblib1.a",
-    "digest": {
-      "hash": "1329e997edbab1f010cff4c912b29c14f51dcb60f673ec98f072722f268d1b3a",
-      "sizeBytes": "1690",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "runner": "local",
-  "remoteCacheHit": false,
-  "status": "",
-  "exitCode": 0
-}{
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/gcc", "-shared", "-o", "bazel-out/x64_windows-fastbuild/bin/liblib1_4a72131949.so", "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o", "-Wl,-S", "-lstdc++"],
-  "environmentVariables": [{
-    "name": "PATH",
-    "value": "c:/tools/msys64/mingw64/bin"
-  }, {
-    "name": "PWD",
-    "value": "/proc/self/cwd"
-  }, {
-    "name": "RUNFILES_MANIFEST_ONLY",
-    "value": "1"
-  }],
-  "platform": {
-    "properties": []
-  },
-  "inputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib1/lib1.o",
-    "digest": {
-      "hash": "7e756e14a463aa978945fe42e8f8e417d9c1ffea1fc083932df70e1f9dad7f05",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "bazel-out/x64_windows-fastbuild/bin/lib1.gen.empty.def",
+    "path": "bazel-out/x64_windows-fastbuild/bin/cc2.gen.empty.def",
     "digest": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sizeBytes": "0",
+      "hashFunctionName": "SHA-256"
+    }
+  }, {
+    "path": "bazel-out/x64_windows-fastbuild/bin/libcc1_4a72131949.so",
+    "digest": {
+      "hash": "96520aab1c403b8d6f2018e211b372d0dd4789f8b385b5d7a6a1de9f5c2f244a",
+      "sizeBytes": "28804",
       "hashFunctionName": "SHA-256"
     }
   }, {
@@ -207,121 +49,11 @@
       "hashFunctionName": "SHA-256"
     }
   }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/liblib1_4a72131949.so"],
+  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/libcc2_4a72131949.so"],
   "remotable": true,
   "cacheable": true,
   "timeoutMillis": "0",
-  "progressMessage": "Linking liblib1_4a72131949.so",
-  "mnemonic": "CppLink",
-  "actualOutputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/liblib1_4a72131949.so",
-    "digest": {
-      "hash": "21fc8d5592c19acf260d614a2e039504ca1a48d063ef78c01b61423071018870",
-      "sizeBytes": "29624",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "runner": "local",
-  "remoteCacheHit": false,
-  "status": "",
-  "exitCode": 0
-}{
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/ar", "rcsD", "bazel-out/x64_windows-fastbuild/bin/liblib2.a", "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o"],
-  "environmentVariables": [{
-    "name": "PATH",
-    "value": "c:/tools/msys64/mingw64/bin"
-  }, {
-    "name": "PWD",
-    "value": "/proc/self/cwd"
-  }, {
-    "name": "RUNFILES_MANIFEST_ONLY",
-    "value": "1"
-  }],
-  "platform": {
-    "properties": []
-  },
-  "inputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o",
-    "digest": {
-      "hash": "492ee49530d68f8f1ef8eeadf5e63f204033b44e58725e1be63ae6184d2e48b8",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/liblib2.a"],
-  "remotable": true,
-  "cacheable": true,
-  "timeoutMillis": "0",
-  "progressMessage": "Linking liblib2.a",
-  "mnemonic": "CppLink",
-  "actualOutputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/liblib2.a",
-    "digest": {
-      "hash": "1a183331f67eeae453ff520911cbdce1cae44a409c4c5a20f0f5cad431c55059",
-      "sizeBytes": "1690",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "runner": "local",
-  "remoteCacheHit": false,
-  "status": "",
-  "exitCode": 0
-}{
-  "commandArgs": ["c:/tools/msys64/mingw64/bin/gcc", "-shared", "-o", "bazel-out/x64_windows-fastbuild/bin/liblib2_4a72131949.so", "-Wl,-rpath,$ORIGIN/_solib_x64_windows/../", "-Lbazel-out/x64_windows-fastbuild/bin", "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o", "-llib1_4a72131949", "-Wl,-S", "-lstdc++"],
-  "environmentVariables": [{
-    "name": "PATH",
-    "value": "c:/tools/msys64/mingw64/bin"
-  }, {
-    "name": "PWD",
-    "value": "/proc/self/cwd"
-  }, {
-    "name": "RUNFILES_MANIFEST_ONLY",
-    "value": "1"
-  }],
-  "platform": {
-    "properties": []
-  },
-  "inputs": [{
-    "path": "bazel-out/x64_windows-fastbuild/bin/_objs/lib2/lib2.o",
-    "digest": {
-      "hash": "492ee49530d68f8f1ef8eeadf5e63f204033b44e58725e1be63ae6184d2e48b8",
-      "sizeBytes": "1548",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "bazel-out/x64_windows-fastbuild/bin/lib2.gen.empty.def",
-    "digest": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "sizeBytes": "0",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "bazel-out/x64_windows-fastbuild/bin/liblib1_4a72131949.so",
-    "digest": {
-      "hash": "21fc8d5592c19acf260d614a2e039504ca1a48d063ef78c01b61423071018870",
-      "sizeBytes": "29624",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "external/bazel_tools/tools/cpp/build_interface_so",
-    "digest": {
-      "hash": "a947181cd43e29dac3502c1244a76733f30fcf691f9efe2a82a9f8635bb48baf",
-      "sizeBytes": "109",
-      "hashFunctionName": "SHA-256"
-    }
-  }, {
-    "path": "external/bazel_tools/tools/cpp/link_dynamic_library.sh",
-    "digest": {
-      "hash": "aa41d7f3d9710edf6690a24c86e23fb94d85735a6aa2326fd662d76024a62dc2",
-      "sizeBytes": "4117",
-      "hashFunctionName": "SHA-256"
-    }
-  }],
-  "listedOutputs": ["bazel-out/x64_windows-fastbuild/bin/liblib2_4a72131949.so"],
-  "remotable": true,
-  "cacheable": true,
-  "timeoutMillis": "0",
-  "progressMessage": "Linking liblib2_4a72131949.so",
+  "progressMessage": "Linking libcc2_4a72131949.so",
   "mnemonic": "CppLink",
   "actualOutputs": [],
   "runner": "local",
